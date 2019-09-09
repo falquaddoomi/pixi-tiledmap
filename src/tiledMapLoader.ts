@@ -1,8 +1,8 @@
 import path from 'path';
 import * as tmx from 'tmx-parser';
 
-function tileMapLoader(this: PIXI.loaders.Loader) {
-  return (resource: PIXI.loaders.Resource, next: () => void) => {
+function tileMapLoader(this: PIXI.Loader) {
+  return (resource: PIXI.LoaderResource, next: () => void) => {
     if (
       !resource.data ||
       // @ts-ignore
@@ -17,6 +17,10 @@ function tileMapLoader(this: PIXI.loaders.Loader) {
       crossOrigin: resource.crossOrigin,
       parentResource: resource,
     };
+
+    if (resource.xhr === null) {
+      throw { msg: 'resource.xhr is null' };
+    }
 
     tmx.parse(resource.xhr.responseText, route, (err, map) => {
       if (err) throw err;

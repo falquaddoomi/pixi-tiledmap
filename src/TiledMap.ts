@@ -1,6 +1,5 @@
-/// <reference types="pixi.js" />
-
 import path from 'path';
+import * as PIXI from 'pixi.js';
 import ImageLayer from './ImageLayer';
 import TileLayer from './TileLayer';
 import TileSet from './TileSet';

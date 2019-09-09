@@ -8,7 +8,7 @@ export default class ImageLayer extends PIXI.Container {
     this.alpha = layer.opacity;
 
     if (layer.image && layer.image.source) {
-      this.addChild(PIXI.Sprite.fromImage(`${route}/${layer.image.source}`));
+      this.addChild(PIXI.Sprite.from(`${route}/${layer.image.source}`));
     }
   }
 }

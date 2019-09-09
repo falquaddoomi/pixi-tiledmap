@@ -1,6 +1,6 @@
 import TileSet from './TileSet';
 
-export default class Tile extends PIXI.extras.AnimatedSprite {
+export default class Tile extends PIXI.AnimatedSprite {
   private static getTextures(tile: ITileData, tileSet: TileSet) {
     const textures = [];
 

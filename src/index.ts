@@ -9,8 +9,7 @@ declare global {
   }
 }
 
-PIXI.loaders.Loader.addPixiMiddleware(tiledMapLoader);
-PIXI.loader.use(tiledMapLoader.call(PIXI.loader));
+PIXI.Loader.shared.use(tiledMapLoader.call(PIXI.Loader.shared));
 
 Object.assign(PIXI.extras, { TiledMap });
 

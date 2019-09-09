@@ -24,7 +24,9 @@ export default class TileSet {
   constructor(route: string, tileSet: ITileSetData) {
     Object.assign(this, tileSet);
 
-    this.baseTexture = PIXI.Texture.fromImage(`${route}/${this.image.source}`, false, PIXI.SCALE_MODES.NEAREST);
+    this.baseTexture = PIXI.Texture.from(`${route}/${this.image.source}`, {
+      scaleMode: PIXI.SCALE_MODES.NEAREST,
+    });
     this.textures = [];
 
     for (let y = this.margin; y < this.image.height; y += this.tileHeight + this.spacing) {

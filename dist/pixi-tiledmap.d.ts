@@ -1,4 +1,3 @@
-/// <reference types="pixi.js" />
 declare module "ImageLayer" {
     export default class ImageLayer extends PIXI.Container {
         constructor(layer: ILayerData, route: string);
@@ -27,7 +26,7 @@ declare module "TileSet" {
 }
 declare module "Tile" {
     import TileSet from "TileSet";
-    export default class Tile extends PIXI.extras.AnimatedSprite {
+    export default class Tile extends PIXI.AnimatedSprite {
         private static getTextures;
         animations: IAnimation[];
         gid: number;
@@ -55,6 +54,7 @@ declare module "TileLayer" {
     }
 }
 declare module "TiledMap" {
+    import * as PIXI from 'pixi.js';
     import TileLayer from "TileLayer";
     import TileSet from "TileSet";
     export class TiledMap extends PIXI.Container {
@@ -73,7 +73,7 @@ declare module "TiledMap" {
     }
 }
 declare module "tiledMapLoader" {
-    function tileMapLoader(this: PIXI.loaders.Loader): (resource: PIXI.loaders.Resource, next: () => void) => void;
+    function tileMapLoader(this: PIXI.Loader): (resource: PIXI.LoaderResource, next: () => void) => void;
     export default tileMapLoader;
 }
 declare module "index" {
