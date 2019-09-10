@@ -123,6 +123,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_tiledmap_.tiledmap.html#interactivechildren" class="tsd-kind-icon">interactive<wbr>Children</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="_tiledmap_.tiledmap.html#issprite" class="tsd-kind-icon">is<wbr>Sprite</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_tiledmap_.tiledmap.html#layers" class="tsd-kind-icon">layers</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_tiledmap_.tiledmap.html#loader" class="tsd-kind-icon">loader</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="_tiledmap_.tiledmap.html#localtransform" class="tsd-kind-icon">local<wbr>Transform</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="_tiledmap_.tiledmap.html#mask" class="tsd-kind-icon">mask</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="_tiledmap_.tiledmap.html#name" class="tsd-kind-icon">name</a></li>
@@ -199,18 +200,21 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Tiled<wbr>Map<span class="tsd-signature-symbol">(</span>resourceUrl<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_tiledmap_.tiledmap.html" class="tsd-signature-type">TiledMap</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Tiled<wbr>Map<span class="tsd-signature-symbol">(</span>loader<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Loader</span>, resourceUrl<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_tiledmap_.tiledmap.html" class="tsd-signature-type">TiledMap</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides Container.__constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/falquaddoomi/pixi-tiledmap/blob/7f2e9fe/src/TiledMap.ts#L18">TiledMap.ts:18</a></li>
+									<li>Defined in <a href="https://github.com/falquaddoomi/pixi-tiledmap/blob/979a31f/src/TiledMap.ts#L19">TiledMap.ts:19</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
+								<li>
+									<h5>loader: <span class="tsd-signature-type">Loader</span></h5>
+								</li>
 								<li>
 									<h5>resourceUrl: <span class="tsd-signature-type">string</span></h5>
 								</li>
@@ -322,7 +326,7 @@
 					<div class="tsd-signature tsd-kind-icon">_height<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/falquaddoomi/pixi-tiledmap/blob/7f2e9fe/src/TiledMap.ts#L17">TiledMap.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/falquaddoomi/pixi-tiledmap/blob/979a31f/src/TiledMap.ts#L18">TiledMap.ts:18</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -396,7 +400,7 @@
 					<div class="tsd-signature tsd-kind-icon">_width<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/falquaddoomi/pixi-tiledmap/blob/7f2e9fe/src/TiledMap.ts#L14">TiledMap.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/falquaddoomi/pixi-tiledmap/blob/979a31f/src/TiledMap.ts#L15">TiledMap.ts:15</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -551,7 +555,7 @@
 					<div class="tsd-signature tsd-kind-icon">background<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Graphics</span><span class="tsd-signature-symbol"> =&nbsp;new PIXI.Graphics()</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/falquaddoomi/pixi-tiledmap/blob/7f2e9fe/src/TiledMap.ts#L12">TiledMap.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/falquaddoomi/pixi-tiledmap/blob/979a31f/src/TiledMap.ts#L13">TiledMap.ts:13</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -861,7 +865,7 @@
 					<div class="tsd-signature tsd-kind-icon">layers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/falquaddoomi/pixi-tiledmap/blob/7f2e9fe/src/TiledMap.ts#L11">TiledMap.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/falquaddoomi/pixi-tiledmap/blob/979a31f/src/TiledMap.ts#L12">TiledMap.ts:12</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -872,6 +876,16 @@
 							</li>
 						</ul>
 					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="loader" class="tsd-anchor"></a>
+					<h3>loader</h3>
+					<div class="tsd-signature tsd-kind-icon">loader<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Loader</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/falquaddoomi/pixi-tiledmap/blob/979a31f/src/TiledMap.ts#L10">TiledMap.ts:10</a></li>
+						</ul>
+					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
 					<a name="localtransform" class="tsd-anchor"></a>
@@ -1059,7 +1073,7 @@
 					<div class="tsd-signature tsd-kind-icon">resource<wbr>Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/falquaddoomi/pixi-tiledmap/blob/7f2e9fe/src/TiledMap.ts#L9">TiledMap.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/falquaddoomi/pixi-tiledmap/blob/979a31f/src/TiledMap.ts#L9">TiledMap.ts:9</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -1190,7 +1204,7 @@
 					<div class="tsd-signature tsd-kind-icon">tile<wbr>Height<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;0</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/falquaddoomi/pixi-tiledmap/blob/7f2e9fe/src/TiledMap.ts#L18">TiledMap.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/falquaddoomi/pixi-tiledmap/blob/979a31f/src/TiledMap.ts#L19">TiledMap.ts:19</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -1200,7 +1214,7 @@
 					<div class="tsd-signature tsd-kind-icon">tile<wbr>Sets<span class="tsd-signature-symbol">:</span> <a href="_tileset_.tileset.html" class="tsd-signature-type">TileSet</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/falquaddoomi/pixi-tiledmap/blob/7f2e9fe/src/TiledMap.ts#L10">TiledMap.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/falquaddoomi/pixi-tiledmap/blob/979a31f/src/TiledMap.ts#L11">TiledMap.ts:11</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -1210,7 +1224,7 @@
 					<div class="tsd-signature tsd-kind-icon">tile<wbr>Width<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;0</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/falquaddoomi/pixi-tiledmap/blob/7f2e9fe/src/TiledMap.ts#L15">TiledMap.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/falquaddoomi/pixi-tiledmap/blob/979a31f/src/TiledMap.ts#L16">TiledMap.ts:16</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -1627,7 +1641,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/falquaddoomi/pixi-tiledmap/blob/7f2e9fe/src/TiledMap.ts#L26">TiledMap.ts:26</a></li>
+									<li>Defined in <a href="https://github.com/falquaddoomi/pixi-tiledmap/blob/979a31f/src/TiledMap.ts#L28">TiledMap.ts:28</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1966,7 +1980,7 @@
 									<h5>fn: <span class="tsd-signature-type">function</span></h5>
 									<ul class="tsd-parameters">
 										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
 												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>displayObject<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">DisplayObject</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 											</ul>
 											<ul class="tsd-descriptions">
@@ -2059,7 +2073,7 @@
 									<h5>fn: <span class="tsd-signature-type">function</span></h5>
 									<ul class="tsd-parameters">
 										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
 												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>displayObject<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">DisplayObject</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 											</ul>
 											<ul class="tsd-descriptions">
@@ -2810,6 +2824,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_tiledmap_.tiledmap.html#layers" class="tsd-kind-icon">layers</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_tiledmap_.tiledmap.html#loader" class="tsd-kind-icon">loader</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
 								<a href="_tiledmap_.tiledmap.html#localtransform" class="tsd-kind-icon">local<wbr>Transform</a>

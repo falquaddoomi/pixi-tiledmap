@@ -1,3 +1,4 @@
+import * as PIXI from 'pixi.js';
 import TileSet from './TileSet';
 
 export default class Tile extends PIXI.AnimatedSprite {

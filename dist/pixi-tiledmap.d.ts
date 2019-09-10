@@ -1,9 +1,11 @@
 declare module "ImageLayer" {
+    import * as PIXI from 'pixi.js';
     export default class ImageLayer extends PIXI.Container {
         constructor(layer: ILayerData, route: string);
     }
 }
 declare module "TileSet" {
+    import * as PIXI from 'pixi.js';
     export default class TileSet {
         firstGid: number;
         baseTexture: PIXI.Texture;
@@ -25,6 +27,7 @@ declare module "TileSet" {
     }
 }
 declare module "Tile" {
+    import * as PIXI from 'pixi.js';
     import TileSet from "TileSet";
     export default class Tile extends PIXI.AnimatedSprite {
         private static getTextures;
@@ -42,6 +45,7 @@ declare module "Tile" {
     }
 }
 declare module "TileLayer" {
+    import * as PIXI from 'pixi.js';
     import Tile from "Tile";
     import TileSet from "TileSet";
     export default class TileLayer extends PIXI.Container {
@@ -59,6 +63,7 @@ declare module "TiledMap" {
     import TileSet from "TileSet";
     export class TiledMap extends PIXI.Container {
         resourceUrl: string;
+        loader: PIXI.Loader;
         tileSets: TileSet[];
         layers: {
             [index: string]: TileLayer;
@@ -68,24 +73,23 @@ declare module "TiledMap" {
         tileWidth: number;
         _height?: number;
         tileHeight: number;
-        constructor(resourceUrl: string);
+        constructor(loader: PIXI.Loader, resourceUrl: string);
         create(): void;
     }
 }
 declare module "tiledMapLoader" {
+    import * as PIXI from 'pixi.js';
     function tileMapLoader(this: PIXI.Loader): (resource: PIXI.LoaderResource, next: () => void) => void;
     export default tileMapLoader;
 }
 declare module "index" {
     import { TiledMap } from "TiledMap";
-    global {
-        namespace PIXI.extras {
-            interface ITiledMap {
-                TiledMap: TiledMap;
-            }
-        }
-    }
-    export default TiledMap;
+    import tiledMapLoader from "tiledMapLoader";
+    const _default: {
+        TiledMap: typeof TiledMap;
+        tiledMapLoader: typeof tiledMapLoader;
+    };
+    export default _default;
 }
 interface ITMXData {
     version: string;

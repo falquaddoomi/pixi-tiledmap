@@ -7,6 +7,7 @@ import TileSet from './TileSet';
 export class TiledMap extends PIXI.Container {
 
   public resourceUrl: string;
+  public loader: PIXI.Loader;
   public tileSets: TileSet[] = [];
   public layers: {[index: string]: TileLayer} = {};
   public background = new PIXI.Graphics();
@@ -17,15 +18,16 @@ export class TiledMap extends PIXI.Container {
   public _height?: number;
   public tileHeight: number = 0;
 
-  constructor(resourceUrl: string) {
+  constructor(loader: PIXI.Loader, resourceUrl: string) {
     super();
+    this.loader = loader;
     this.resourceUrl = resourceUrl;
     this.create();
   }
 
   public create() {
-    const route = path.dirname(PIXI.loader.resources[this.resourceUrl].url);
-    const data: ITMXData = PIXI.loader.resources[this.resourceUrl].data;
+    const route = path.dirname(this.loader.resources[this.resourceUrl].url);
+    const data: ITMXData = this.loader.resources[this.resourceUrl].data;
 
     Object.assign(this, data);
 
@@ -40,8 +42,10 @@ export class TiledMap extends PIXI.Container {
     this.addChild(this.background);
 
     data.tileSets.forEach(tileSet => {
+      const tilesetRoot = path.join(route, path.dirname(tileSet.source));
+
       this.tileSets.push(
-        new TileSet(route, tileSet),
+        new TileSet(tilesetRoot, tileSet),
       );
     });
 

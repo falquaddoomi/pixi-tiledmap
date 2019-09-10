@@ -1,3 +1,5 @@
+import * as PIXI from 'pixi.js';
+
 export default class TileSet {
 
   public firstGid: number = 0;
